@@ -9,7 +9,7 @@
  *   e.g. VITE_API_URL=https://mlverse-backend.onrender.com
  */
 
-const RAW_API_URL = import.meta.env.VITE_API_URL || '';
+const RAW_API_URL = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? 'https://mlverse-backend.onrender.com' : '');
 
 export const API_BASE_URL = RAW_API_URL.replace(/\/+$/, '');
 
